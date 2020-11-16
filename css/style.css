@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+html,
+body {
+  height: 100%;
+}
+body {
+  overflow-x: hidden !important;
+  color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  background: #141414;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-container {
+    background: #1a1a1a;
+    color: #f1f1f1;
+    padding: 45px;
+    padding-top: 15px;
+    border-radius: 7px;
+    width: 61%;
+}
+
+.highlighted-text:hover {
+    color: #cd7fcf;
+    transition: 200ms;
+}
+
+.highlighted-text {
+    transition: 200ms;
+}
+
+.square-purple {
+    display: inline-block;
+    background: #4568DC;
+    background: linear-gradient(to right, #B06AB3, #4568DC);
+    padding: 26px;
+    text-align: center;
+    width: 16%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: 300ms;
+}
+
+.cs {
+    cursor: not-allowed;
+}
+
+.square-purple:not(.cs):hover {
+    transform: scale(1.03);
+}
+
+.header {
+  box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 75px;
+  background: #1a1a1a;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.header > div.header-logo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.header > div.header-logo > img {
+  width: 100px;
+  border-radius: 58%;
+  border: 20px solid #1a1a1a;
+  transition: 250ms;
+}
+
+.shadow {
+  position: absolute;
+  height: 90.5%;
+  width: 90.5%;
+  top: 6%;
+  box-shadow: 0px 0px 24px -4px black;
+  border-radius: 58%;
+  z-index: -10;
+  left: 5%;
+}
+
+.shadow-holder {
+  background: #1a1a1a;
+  position: absolute;
+  width: 120%;
+  height: 52%;
+  z-index: -9;
+  left: -10%;
+}
+
+.header-title {
+  letter-spacing: 4px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.header-title:hover {
+  letter-spacing: 4px;
+  transition: 0.3s;
+}
+
+.header-group {
+  display: flex;
+  align-items: center;
+}
+
+.header-btn {
+  border-radius: 7px;
+  background: #1a1a1a;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 0 0 21px;
+  color: white;
+  transition: 0.4s;
+  font-size: 12px;
+  font-weight: 500px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.header-open-menu {
+  border-radius: 3px;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  border: 1px solid #f2f2f2;
+  text-align: center;
+  display: none;
+  width: 0%;
+}
+
+.header-group .header-btn:after { 
+  border-left: 0 solid #f2f2f2;
+  display: block;
+  content: "";
+  left: 0; 
+  top: 0; 
+  height: 100%;
+  width: 0;
+  position: absolute; 
+  transition: all 0.4s ease 0s; 
+  -webkit-transition: all 0.4s ease 0s; 
+  z-index: -100;
+  background: #171717;
+}
+.header-group .header-btn:hover:after {
+  z-index: -100;
+  width: 200%;
+  transform: translateX(100%);
+  border-radius: 3px;
+}
+
+.header-btn:hover {
+  transition: 0.1s;
+  transform: scale(1.06);
+}
+
+.header-menu .header-btn {
+  background: #171717;
+}
+
+.header-menu {
+  box-shadow: 0px 0px 35px -1px rgba(0,0,0,0.75);
+  display: none;
+  padding: 16px 0 0 0;
+  position: absolute;
+  width: 90%;
+  top: 150px;
+  left: 5%;
+  right: 5%;
+  height: 123px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  transition: 100ms;
+}
+
+.menu-row:not(:nth-child(1)) {
+  margin: 22px 0 0 0;
+}
+
+@media screen and (max-width: 1198px) {
+    .square-purple {
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+      margin-top: 22%;
+  }
+  .header-group .header-btn {
+    display: none;
+  }
+  .header-open-menu {
+    position: relative;
+    display: block;
+    width: 26px;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px;
+    transition: 1000ms;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cookiealert {
+    font-size: 12px;
+  }
+  .header-title {
+    display: none;
+  }
+}
