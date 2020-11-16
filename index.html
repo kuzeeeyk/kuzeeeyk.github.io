@@ -12,26 +12,21 @@
     <meta property="og:locale" content="tr" />
     <meta property="og:site_name" content="Kuzey is Online" />
     <meta property="og:image" content="cdn/logosquare.png" />
+	<meta property="og:logo" content="cdn/logosquare.png" />
+	<meta property="og:icon" content="cdn/logosquare.png" />
     <link rel="icon" type="image/x-icon" href="cdn/logosquare.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>.header-menu {transform: translateX(-600px); display: inline-block}</style>
     <script>
       let header;
-      $(document).ready(function() {
-        $(".header-menu").animate({left: "-100%"})
-        $(".header-menu").hide(100)
-        header = "invisible"
-      });
+      header = "invisible"
 
       function openMenu() {
         if (header == "invisible") {
-          $(".header-menu").show()
-          $(".header-menu").animate({left: "5%"})
+          document.getElementById("header-menu").setAttribute('style','transform: translateX(0)');
           header = "visible"
         } else {
-          $(".header-menu").animate({left: "-100%"})
-          $(".header-menu").hide(100)
+          document.getElementById("header-menu").setAttribute('style','transform: translateX(-600px)');
           header = "invisible"
         }
       }
@@ -50,10 +45,10 @@
         <a class="header-btn" href="https://discord.com/users/692850598286196787" target="_blank">Dıscord</a>
       </div>
       <div class="header-group">
-        <a class="header-open-menu" onclick="openMenu()"><i class="fa fa-bars"></i></a>
+        <a class="header-open-menu" onclick="openMenu()">☰</a>
       </div>
     </div>
-    <div class="header-menu">
+    <div class="header-menu" id="header-menu">
       <div class="menu-row">
         <a class="header-btn" href="https://www.instagram.com/kuzeeeyk/" target="_blank">Instagram</a>
       </div>
